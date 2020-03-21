@@ -9,11 +9,17 @@
 /* ssize_t pread(int fd, void *buf, size_t count, off_t pos);
  *
  * DESCRIPTION:
- * 	This syscall reads 'count' bytes from 'pos' position of file 'fd' to 'buf' area.
- * 	basically pwrite is the same:
- * 		ssize_t pwrite(int fd, const void *buf, size_t count, off_t pos);
- * 	Those two syscalls don't care where the in-position is of the file! They just do their own.
+ * 	This syscall reads 'count' bytes from 'pos' position of file 'fd' to
+ * 	'buf' area. basically pwrite is the same:
+ * 	    ssize_t pwrite(int fd, const void *buf, size_t count, off_t pos);
+ * 	Those two syscalls don't care where the in-position is of the file! 
+ * 	They just do their own.
  *
+ * RETURN VALUE:
+ * 	return number of bytes that has been read/written
+ * 	return -1 and set errno if failed (bad things happened)
+ * 	for pread(): return 0 represents "EOF"
+ * 	for pwrite(): return 0 represents there is nothing to be written
  */
 
 int main(){
