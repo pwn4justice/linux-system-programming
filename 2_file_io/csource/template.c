@@ -9,7 +9,7 @@
 //#include <string.h>
 //#include <math.h>
 
-#define FILENAME "/home/logan/linux_lab/2/test_data/article.txt"
+#define FILENAME "/home/logan/linux_lab/linux-system-programming/2_file_io/test_data/article.txt"
 //printf("[*] Error : xxx\n"); // failed printf()
 //printf("[=] Error : xxx\n"); // success printf()
 

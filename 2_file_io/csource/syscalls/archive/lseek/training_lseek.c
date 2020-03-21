@@ -20,7 +20,7 @@
  * 	ESPIPE
  */
 
-#define FILENAME "/home/logan/linux_lab/2/test_data/article.txt"
+#define FILENAME "/home/logan/linux_lab/linux-system-programming/2_file_io/test_data/article.txt"
 
 int main(){
 	/* variables definition area */
@@ -60,7 +60,9 @@ int main(){
 		       printf("[*] Error : main.while.read()\n");	
 		printf(" \tvalue is : %c\n", buf);
 		i++;
-	}
+	}// end while 
+	 // ACTUALLY, you can use 'pread()/pwrite()' to re-implement things above.(in a more simple way),
+	 // please consider next file: training_pread.c
 
 
 	/* end main process */
